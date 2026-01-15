@@ -1,9 +1,9 @@
 ﻿# Cricket Tournament Management System (CTMS)
 
 ## 📌 Project Overview
-[cite_start]The **Cricket Tournament Management System (CTMS)** is a relational database project designed to manage data for the **ICC ODI World Cup 2023**[cite: 1, 4]. [cite_start]It tracks teams, players, matches, venues, and detailed scorecards (batting and bowling) with high precision[cite: 2].
+The **Cricket Tournament Management System (CTMS)** is a relational database project designed to manage data for the **ICC ODI World Cup 2023**. It tracks teams, players, matches, venues, and detailed scorecards (batting and bowling) with high precision.
 
-[cite_start]The goal of this project is to model complex tournament data into a functional SQL Server database to analyze team strategies and player performances[cite: 6].
+The goal of this project is to model complex tournament data into a functional SQL Server database to analyze team strategies and player performances.
 
 ## ⚙️ Tech Stack
 * **Database Engine:** Microsoft SQL Server 2022
@@ -11,13 +11,13 @@
 * **Concepts Used:** Normalization, Constraints, Joins, Sub-queries, Triggers.
 
 ## 📂 Database Schema
-[cite_start]The database consists of **14 normalized tables** [cite: 13] handling various aspects of cricket:
+The database consists of **14 normalized tables** handling various aspects of cricket:
 * **Core Entities:** `Teams`, `Players`, `Countries`, `Venues`, `Umpires`.
 * **Match Logic:** `Matches`, `MatchOfficials`, `MatchResults`, `PointsTable`.
 * **Scoring System:** `Innings`, `BattingScorecard`, `BowlingScorecard`.
 
 ## 🚀 Key Features (SQL Objects)
-This project goes beyond basic tables by implementing advanced SQL objects found in `DDL.sql`:
+This project goes beyond basic tables by implementing advanced SQL objects:
 
 ### 1. Views
 * `Vw_MatchDetailsView`: A complex join view that displays match dates, venues, and team names in a readable format.
@@ -35,7 +35,7 @@ This project goes beyond basic tables by implementing advanced SQL objects found
 * `Tr_InsteadOfDeleteVenue`: **Safety.** Prevents the accidental deletion of Venues that are already linked to a Match.
 
 ## 📊 Data Analysis
-[cite_start]The `DML.sql` script populates the database with real-world 2023 World Cup data [cite: 21] and includes queries for:
+The `DML.sql` script populates the database with real-world 2023 World Cup data and includes queries for:
 * **Complex Analysis:** Using `GROUP BY`, `ROLLUP`, and `CUBE` for match statistics.
 * **Ranking:** Using `DENSE_RANK()` and `ROW_NUMBER()` to rank players by runs.
 * **Logical Operations:** Filtering matches using `EXISTS`, `COALESCE`, and implicit joins.
